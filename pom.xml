@@ -26,4 +26,11 @@
             </plugin>
         </plugins>
     </build>
+
+    <scm>
+        <connection>scm:git:git@github.com:nullen949/demo-maven-release-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:nullen949/demo-maven-release-plugin.git</developerConnection>
+        <url>https://github.com/nullen949/demo-maven-release-plugin.git</url>
+        <tag>HEAD</tag>
+    </scm>
 </project>
