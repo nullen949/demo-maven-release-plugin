@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.nullen.demo</groupId>
+    <artifactId>demo-maven-release-plugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>demo-maven-release-plugin</name>
+    <description>demo-maven-release-plugin</description>
+    <modules>
+        <module>demo-module-a</module>
+        <module>demo-module-b</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules> <!-- 自动同步子模块版本 -->
+                    <tagNameFormat>release-@{project.version}</tagNameFormat> <!-- 标签命名规则 -->
+                    <releaseProfiles>deploy</releaseProfiles> <!-- 部署相关Profile -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
